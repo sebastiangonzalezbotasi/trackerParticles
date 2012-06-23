@@ -1,6 +1,10 @@
 #pragma once
 
 #include "ofMain.h"
+#include "Pelota.h" 
+
+#define TOTAL 100       // Esta bueno explorar hasta que nœmero puede llegar
+
 
 class testApp : public ofBaseApp{
 
@@ -18,5 +22,9 @@ class testApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-		
+    
+    Pelota  p[TOTAL];
+    int tiempo;
+    ofImage bola;
+  		
 };
