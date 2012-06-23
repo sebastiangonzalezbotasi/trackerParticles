@@ -6,6 +6,10 @@
 
 Application development in [openFrameworks](http://www.openframeworks.cc/) particles generated according to the detected blobs through an artificial vision system.
 
+### :: Addons
+
+ofxOpenCV
+
 
 ##Contributors 
 **Sebastian G. Botasi**, born in La Plata (Argentina) in 1989.
