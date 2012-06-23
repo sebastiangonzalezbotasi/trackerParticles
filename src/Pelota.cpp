@@ -58,16 +58,22 @@ void Pelota::agregarScaleFade(bool _melt = true){
 }
 
 void Pelota::draw(){
+    ofPushStyle();
     ofSetColor(color, color.a * alphaF );
     ofCircle(pos.x, pos.y, tamanio * escalaF );
+    ofPopStyle();
 }
 
 void Pelota::draw(ofImage* _imagen){ // espera un puntero de tipo ofImage
+    ofPushStyle();
+    
     ofSetColor(color, color.a * alphaF );
     _imagen->draw(  pos.x - _imagen->getWidth() * escalaF, 
                   pos.y - _imagen->getHeight() * escalaF, 
                   _imagen->getWidth() * escalaF, 
                   _imagen->getHeight() * escalaF);
+    ofPopStyle();
+
 }
 
 void Pelota::matar(){

@@ -1,7 +1,8 @@
 #pragma once
 
 #include "ofMain.h"
-#include "Pelota.h" 
+#include "Pelota.h"
+#include "ofxOpenCv.h"
 
 #define TOTAL 100       // Esta bueno explorar hasta que nœmero puede llegar
 
@@ -25,6 +26,27 @@ class testApp : public ofBaseApp{
     
     Pelota  p[TOTAL];
     int tiempo;
+ 
     ofImage bola;
+    ofImage logo;
+    
+    
+    ofVideoGrabber 		    vidGrabber;
+    
+    ofxCvColorImage			colorImg;
+    
+    ofxCvGrayscaleImage 	grayImage;
+    ofxCvGrayscaleImage 	grayBg;
+    ofxCvGrayscaleImage 	grayDiff;
+    
+    ofxCvContourFinder 	    contourFinder;
+    
+    int 				threshold;
+    bool				bLearnBakground;
+    bool activoPanel;
+    
+    int posX;
+    int posY;
+
   		
 };
